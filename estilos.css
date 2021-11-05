@@ -8,6 +8,10 @@ body {
   background: #1d202b;
   color: #fff;
   font-family: "Roboto", sans-serif;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .contenedor {
@@ -15,6 +19,9 @@ body {
   max-width: 1200px;
   margin: auto;
   padding: 40px 0;
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  gap: 20px;
 }
 
 .titulo {
@@ -23,6 +30,9 @@ body {
 }
 
 .contenedor-conciertos {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
 }
 
 .card {
@@ -38,6 +48,9 @@ body {
 
 .card .textos {
   height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .banner {
@@ -46,6 +59,9 @@ body {
   padding: 20px;
   background-size: cover;
   background-position: center center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .banner ul {
@@ -72,10 +88,27 @@ body {
 }
 
 @media screen and (max-width: 900px) {
+  .contenedor {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .contenedor-conciertos {
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
 @media screen and (max-width: 700px) {
+  .contenedor {
+    grid-template-columns: 1fr auto;
+  }
 }
 
 @media screen and (max-width: 600px) {
+  .contenedor {
+    grid-template-columns: 1fr;
+  }
+
+  .contenedor-conciertos {
+    grid-template-columns: 1fr;
+  }
 }
